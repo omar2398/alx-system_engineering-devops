@@ -4,4 +4,4 @@ echo "$2" >> $1
 chmod u+x $1
 git add .
 git commit -m "omar"
-git push
+git push -u origin master 
