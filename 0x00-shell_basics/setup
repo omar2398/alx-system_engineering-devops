@@ -3,5 +3,7 @@ echo "#!/bin/bash" > $1
 echo "$2" >> $1
 chmod u+x $1
 git add .
-git commit -m "omar"
+echo "pls enter your commit ya steven :D"
+read com 
+git commit -m "${com}"
 git push -u origin master 
