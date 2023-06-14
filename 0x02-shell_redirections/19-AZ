@@ -1,3 +1,2 @@
-#!/bin/bash 
-tr - d 'A' < Z
-tr -d 'c' < e 
+#!/bin/bash
+tr - d 'A' < Z \ntr -d 'c' < e
