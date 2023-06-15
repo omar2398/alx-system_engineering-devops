@@ -1,9 +1,0 @@
-#!/bin/bash 
-echo "pls enter your repo's name ya king :D"
-read repo 
-git clone https://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@github.com/omar2398/${repo}.git
-echo "#!/bin/bash"> ${repo}/repo_push
-echo "pls enter your commit :D" >> ${repo}/repo_push
-echo "read commi " >>${repo}/repo_push
-echo "git add . && git commit -m "${commi}" && git push -u origin master " >>  ${repo}/repo_push
-chmod u+x ${repo}/repo_push
