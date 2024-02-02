@@ -1,6 +1,6 @@
-# Kills a process named killmenow
+# kill process killmenow
 
-exec { 'killmenow':
+exec { 'pkill':
   command  => 'pkill killmenow',
   provider => 'shell',
 }
