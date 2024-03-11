@@ -1,7 +1,19 @@
-#!/usr/bin/env bash
-# makes nginx installation to listen on port 80
+#!/bin/bashhttps://github.com/omar2398/alx-system_engineering-devops/blob/master/0x0E-web_stack_debugging_1/0-nginx_likes_port_80
+
+# Update package lists
 apt-get update
-apt-get - install curl
-rm /etc/nginx/sites-available/*~
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo service nginx restart
+
+# Install Nginx
+apt-get install -y nginx
+
+# Modify Nginx configuration to listen on port 80
+sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+
+# Restart Nginx service to apply changes
+service nginx restart
+
+# Check if Nginx is listening on port 80
+nc -zv 0 80
+
+# Output a message indicating the fix is applied
+echo "Nginx is now listening on port 80"
